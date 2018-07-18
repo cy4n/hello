@@ -1,7 +1,7 @@
-FROM openjdk:8-jdk-alpine
-
+FROM openjdk:8-jre
 EXPOSE 8080
 
-VOLUME /tmp
-COPY target/hello*.jar app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+RUN mkdir /app
+COPY target/hello*.jar /app/hello.jar
+WORKDIR /app
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/hello.jar"]
