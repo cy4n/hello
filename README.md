@@ -3,6 +3,9 @@ another playground to try out new fancy tools and stuff
 
 ## changelog
 
+### 0.1.2
+run hello app as non-root-user in docker image
+
 ### 0.1.1 
 maven profile for docker image creation (with fabric8 maven plugin)  
 * build the current container image
