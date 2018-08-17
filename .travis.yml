@@ -1,0 +1,6 @@
+language: java
+
+script: ./mvnw clean verify
+
+jdk:
+- oraclejdk8
